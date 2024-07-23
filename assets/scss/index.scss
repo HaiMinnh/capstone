@@ -155,9 +155,13 @@
                                 height: 64px;
 
                                 .buy-now {
+                                    text-decoration: none;
                                     width: 60%;
-                                    @include mButton($text-24, $fw-light, $text-dark, $bg-yellow-200, 12px 40px, none, none, $bg-yellow-200, none);
-
+                                    @include mText($text-24, $fw-light, $text-dark);
+                                    background-color: $bg-yellow-200;
+                                    border: none;
+                                    text-align: center;
+                                    padding: $p-3 $p-0;
                                 }
 
                                 .money {

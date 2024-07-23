@@ -131,19 +131,15 @@
   height: 64px;
 }
 .product .container .row .col .card .card-body .name-price .buy-money .buy-now {
+  text-decoration: none;
   width: 60%;
   font-size: 24px;
   font-weight: 300;
   color: #000000;
-  background: #E1B067;
-  padding: 12px 40px;
+  background-color: #E1B067;
   border: none;
-  border-radius: none;
-  transition: all 0.5s;
-}
-.product .container .row .col .card .card-body .name-price .buy-money .buy-now:hover {
-  color: none;
-  background: #E1B067;
+  text-align: center;
+  padding: 0.75rem 0;
 }
 .product .container .row .col .card .card-body .name-price .buy-money .money {
   display: flex;
