@@ -1,0 +1,332 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #000000;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+.header .container .login a {
+  font-size: 16px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.nav {
+  height: 50px;
+}
+.nav .container {
+  display: flex;
+  align-items: center;
+}
+.nav .container a {
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.carousel {
+  background: url(/assets/img/image\ 6.png);
+  background-size: cover;
+  background-position: bottom right;
+}
+.carousel .container {
+  display: flex;
+  justify-content: space-between;
+  height: 530px;
+  align-items: center;
+}
+.carousel .container .thumb-nail img {
+  width: 100%;
+}
+.carousel .container .product-info .product-title {
+  font-size: 40px;
+  font-weight: 300;
+  color: #000000;
+}
+.carousel .container .product-info .product-desc {
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.carousel .container .product-info .btn-buy {
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  background: #F8B653;
+  padding: 12px 40px;
+  border: none;
+  border-radius: none;
+  transition: all 0.5s;
+  text-align: center;
+}
+.carousel .container .product-info .btn-buy:hover {
+  color: none;
+  background: #E1B067;
+}
+
+.product {
+  height: 1044px;
+  margin: 2.25rem auto;
+}
+.product .container .product-title {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  margin: 3rem auto;
+}
+.product .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 369px;
+}
+.product .container .row .col {
+  flex: auto;
+  width: 33.3333333333%;
+  padding: 2.25rem 3rem;
+}
+.product .container .row .col .card {
+  background: #F8F8F8;
+  box-shadow: rgba(0, 0, 0, 0.25);
+  border: none;
+}
+.product .container .row .col .card img {
+  padding: 50px 40px;
+}
+.product .container .row .col .card .card-body {
+  padding: 0;
+}
+.product .container .row .col .card .card-body .name-price .name {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000000;
+  padding: 0 1.5rem;
+}
+.product .container .row .col .card .card-body .name-price .desc {
+  font-size: 20px;
+  font-weight: 300;
+  color: #CBC9C9;
+  padding: 0 1.5rem;
+}
+.product .container .row .col .card .card-body .name-price .buy-money {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+}
+.product .container .row .col .card .card-body .name-price .buy-money .buy-now {
+  width: 60%;
+  font-size: 24px;
+  font-weight: 300;
+  color: #000000;
+  background: #E1B067;
+  padding: 12px 40px;
+  border: none;
+  border-radius: none;
+  transition: all 0.5s;
+}
+.product .container .row .col .card .card-body .name-price .buy-money .buy-now:hover {
+  color: none;
+  background: #E1B067;
+}
+.product .container .row .col .card .card-body .name-price .buy-money .money {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  background: #DEDDDC;
+}
+
+.register .container .title {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+.register .container .row .col {
+  padding: 0.5rem 4rem;
+}
+.register .container .row .col .form-control {
+  margin: 1.25rem;
+  border: none;
+  border-radius: 0;
+  border-bottom: 5px solid rgb(174, 24, 226) !important;
+}
+.register .container .row .col .form-control::placeholder {
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+.register .container .row .col .gender {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.75rem;
+}
+.register .container .row .col .gender .title {
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+.register .container .row .col .gender .form-check-input {
+  padding: 0.75rem;
+  margin: 0 1rem;
+}
+.register .container .row .col .gender .form-check-input:checked {
+  background-color: #AE18E2;
+  border: none;
+}
+.register .container .sub {
+  font-size: 30px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background: #AE18E2;
+  padding: 12px 120px;
+  border: none;
+  border-radius: none;
+  transition: all 0.5s;
+}
+.register .container .sub:hover {
+  color: none;
+  background: #E1B067;
+}
+
+.footer1 {
+  margin: 100px 0 0 0;
+  background-color: #FAFAFA;
+}
+.footer1 .container .div1 {
+  display: flex;
+  height: auto;
+  padding: 50px 100px;
+}
+.footer1 .container .div1 .help {
+  width: 33.3333333333%;
+}
+.footer1 .container .div1 .help .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.footer1 .container .div1 .help a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.footer1 .container .div1 .oders {
+  width: 33.3333333333%;
+}
+.footer1 .container .div1 .oders .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.footer1 .container .div1 .oders a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.footer1 .container .div1 .register {
+  width: 33.3333333333%;
+}
+.footer1 .container .div1 .register .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.footer1 .container .div1 .register .desc {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.footer1 .container .div1 .register .more {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eb3232;
+}
+
+.footer2 {
+  background-color: #ECECEC;
+}
+.footer2 .container .div2 {
+  display: flex;
+  padding: 50px 100px;
+}
+.footer2 .container .div2 .email {
+  width: 33.3333333333%;
+}
+.footer2 .container .div2 .email .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.footer2 .container .div2 .email .desc {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.footer2 .container .div2 .email .more {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eb3232;
+}
+.footer2 .container .div2 .gift {
+  width: 33.3333333333%;
+}
+.footer2 .container .div2 .gift .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.footer2 .container .div2 .gift .desc {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.footer2 .container .div2 .gift .more {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eb3232;
+}
+.footer2 .container .div2 .store {
+  width: 33.3333333333%;
+}
+.footer2 .container .div2 .store .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.footer2 .container .div2 .store .desc {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.footer2 .container .div2 .store .more {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eb3232;
+}
