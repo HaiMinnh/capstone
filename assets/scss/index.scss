@@ -68,9 +68,10 @@
 
     .container {
         display: flex;
-        justify-content: space-between;
         height: 530px;
         align-items: center;
+
+        .carousel-indicators {}
 
         .thumb-nail {
             img {
@@ -95,16 +96,39 @@
                 text-align: center;
             }
         }
+
+        .carousel-control-prev {
+            .carousel-control-prev-icon {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+
+        .carousel-control-next {
+            .carousel-control-prev-icon {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .carousel-control-next-icon {
+                width: 3rem;
+                height: 3rem;
+            }
+
+
+        }
     }
 }
 
 //product
 .product {
-    height: 1044px;
+    height: 1440px;
     margin: $m-9 auto;
 
 
     .container {
+        height: 100%;
+
         .product-title {
             @include mText($text-40, $fw-normal, $text-dark);
             text-align: center;
@@ -116,45 +140,34 @@
             display: flex;
             flex-wrap: wrap;
             height: 369px;
-
-            .col {
+            .col{
                 flex: auto;
                 width: calc(100%/3);
-                padding: $p-9 $p-10;
-
-                .card {
+                padding: $p-10 $p-9;
+                .card{
                     background: $bg-grey-50;
                     box-shadow: rgba(0, 0, 0, 0.25);
                     border: none;
-
-                    img {
-                        padding: 50px 40px;
-
-
+                    img{
+                        padding: 20px 30px;
                     }
-
-                    .card-body {
+                    .card-body{
                         padding: 0;
-
-                        .name-price {
-                            .name {
-                                @include mText($text-24, $fw-light, $text-dark);
+                        .name-price{
+                            .name{
+                                @include mText($text-24, $fw-normal, $text-dark);
                                 padding: $p-0 $p-6;
                             }
-
-                            .desc {
+                            .desc{
                                 @include mText($text-20, $fw-light, $text-grey);
                                 padding: $p-0 $p-6;
-
-
+                                margin-bottom: $m-4;
                             }
-
-                            .buy-money {
+                            .buy-money{
                                 display: flex;
                                 justify-content: space-between;
                                 height: 64px;
-
-                                .buy-now {
+                                .buy-now{
                                     text-decoration: none;
                                     width: 60%;
                                     @include mText($text-24, $fw-light, $text-dark);
@@ -163,14 +176,12 @@
                                     text-align: center;
                                     padding: $p-3 $p-0;
                                 }
-
-                                .money {
+                                .money{
+                                    @include mText($text-24, $fw-semi, $text-dark);
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     width: 40%;
-
-
                                     background: $bg-grey-200;
                                 }
                             }
@@ -179,63 +190,9 @@
                 }
             }
         }
+
     }
 }
-
-.register {
-    .container {
-        .title {
-            @include mText($text-40, $fw-normal, $text-dark);
-            text-align: center;
-        }
-
-        .row {
-            .col {
-                padding: $p-2 $p-regis;
-
-                .form-control {
-                    margin: $m-5;
-                    border: none;
-                    border-radius: 0;
-                    border-bottom: 5px solid rgba(174, 24, 226, 1) !important;
-
-                    &::placeholder {
-                        @include mText($text-30, $fw-normal, $text-dark);
-                    }
-
-
-                }
-
-                .gender {
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
-                    padding: $p-0 $p-7;
-                    .title{
-                        @include mText($text-30, $fw-normal, $text-dark);
-
-                    }
-                    .form-check-input{
-                        padding: $p-3;
-                        margin: 0 $p-4;
-                        &:checked{
-                            background-color: $bg-pink;
-                            border: none;
-                        } 
-                    }
-
-    
-                }
-
-            }
-        }
-        .sub {
-            @include mButton($text-30, $fw-normal, $text-white, $bg-pink, 12px 120px, none, none, $bg-yellow-200, none);
-        }
-    }
-}
-
-
 
 //footer
 .footer1 {

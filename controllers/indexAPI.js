@@ -1,42 +1,51 @@
 console.log(axios);
 //API index
 
-window.onload = function(e) {
-    getDataIndexApi();
-}
-
-
-
 async function getDataIndexApi() {
-    try{
+    try {
         let response = await axios({
             url: 'https://shop.cyberlearn.vn/api/Product',
-            method :'GET',
+            method: 'GET',
             responseType: 'json'
         });
         console.log(response.data);
-    rennderProduct(response.data);        
-    }catch(err) {
+        renderProduct(response.data.content);
+    } catch (err) {
         console.log(err);
-    }    
+    }
 }
 
-
-
-window.rennderProduct = function (arr){
-    let htmlTring = '';
-    for (let item of arr){
-        htmlTring=`<div class="product">
-                <h2>${product.name}</h2>
-                <img src="${product.image}" alt="${product.name}" style="width: 100px; height: auto;">
-                <p><strong>Description:</strong> ${product.shortDescription}</p>
-                <p><strong>Price:</strong> $${product.price}</p>
-                <p><strong>Available Sizes:</strong> ${sizes.join(', ')}</p>
-                <p><strong>Categories:</strong> ${categories.map(c => c.category).join(', ')}</p>
-                <p><strong>Related Products:</strong> ${relatedProducts.join(', ')}</p>
-            </div>`
+window.renderProduct = function (arr) {
+    let htmlString = '';
+    //for (let product of arr) {
+        for (let i = 0; i < 6 && i < arr.length; i++) {
+            let product = arr[i];
+        console.log(product);
+        htmlString += `
+                <div class="col">
+                    <div class="card item-1">
+                        <img src=${product.image} alt="product1">
+                        <div class="card-body">
+                            <div class="name-price">
+                                <h1 class="name">${product.name}</h1>
+                                <h2 class="desc">${product.shortDescription}</h2>
+                                <div class="buy-money">
+                                    <a href="./detail.html?productid=1" class="buy-now">
+                                        Buy now
+                                    </a>
+                                    
+                                    <div class="money">${product.price}$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        `;
     }
-    document.querySelector('.card').onclick = async function(e){
-        getDataIndexApi(rennderProduct());
-    }   
-}   
+    document.querySelector('#render').innerHTML = htmlString;
+    return htmlString
+}
+
+window.onload = function (e) {
+    getDataIndexApi();
+}
